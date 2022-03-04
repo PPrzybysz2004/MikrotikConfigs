@@ -1,0 +1,12 @@
+/disk
+set sata1 disabled=no
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=192.168.14.1/24 interface=ether1 network=192.168.14.0
+/ip dhcp-client
+add interface=ether1
+/system ntp client
+set enabled=yes
+/system ntp client servers
+add address=80.50.231.226
